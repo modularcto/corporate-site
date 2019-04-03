@@ -1,0 +1,52 @@
+#+TITLE: Modular CTO README
+#+STARTUP: Overview
+
+This repository contains all of the corporate website information for Modular
+CTO.
+
+This is a very simple Jekyll site that is hosted on github pages.
+
+* Contents                                                              :TOC:
+- [[#getting-started][Getting Started]]
+  - [[#install-jekyll-and-dependencies][Install Jekyll and Dependencies]]
+  - [[#start-jekyll-server-locally][Start Jekyll Server Locally]]
+  - [[#update-github-pages-gem][Update Github Pages Gem]]
+- [[#site-update][Site Update]]
+
+* Getting Started
+  The following instructions will allow you to stand this up loccally so that
+  you can make changes and test them locally before merging into master. This
+  repoistory is deployed to Github pages on the master branch. The master branch
+  is locked down unless and authorized reviewer merges in the code from a pull
+  request.
+
+** Install Jekyll and Dependencies
+     #+NAME: Install Jekyll
+     #+begin_src bash
+       git clone git@github.com:modularcto/corporate-site.git
+       gem install bundler
+       cd corporate-site
+       bundle install
+     #+end_src
+
+** Start Jekyll Server Locally
+     #+NAME: Serve content
+     #+begin_src bash
+       bundle exec jekyll serve
+     #+end_src
+
+** Update Github Pages Gem
+     #+NAME: Update gem
+     #+begin_src bash
+       bundle update
+     #+end_src
+
+* Site Update
+  Currently, the site is very basic and the only update to the page is at the
+  root with ~index.md~. Any changes here will generate new content. In the
+  futrure we will be adding more markdown files to add more content to the page.
+
+  One thing to note, if you make changes to the ~_config.yml~ this is not
+  automatically trigger a rebuild of the site like the changes to the markdown
+  files do. You will need to reset the Jekyll server locally so that you can
+  pick up that change.
